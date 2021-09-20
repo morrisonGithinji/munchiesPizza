@@ -1,3 +1,37 @@
 
 
-let pizzasizes=["small","medium","large"];
+let pizzaSizes=["small","medium","large"];
+let pizzaTypes=[" "];
+
+function pizzatypes(name,image){
+    this.name=name;
+    this.size=size;
+
+    this.prices= {
+      "small":=500,
+      "medium":=800,
+      "large":=1000
+    }
+}
+
+function Crust(name,price){
+  this.name=name;
+  this.price=price;
+}
+
+function toppings(name,price){
+  this.name=name;
+  this.price=price;
+}
+
+pizzaList ={
+    new pizzaTypes("BBQ", bbq.jpeg)
+    new pizzaTypes("Pepperoni", "Pepperoni.jpeg")
+    new pizzaTypes("Hawaiian", "hawaiian.jpeg)
+} 
+
+let pizzaCrust =[
+  new crust("crispy", 120),
+  new crust("Thick-crust", 150),
+  new crust("vegan",200)
+]
