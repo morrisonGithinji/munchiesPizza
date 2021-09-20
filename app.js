@@ -1,4 +1,7 @@
-
+/*pizzasizes(small,medium,large)
+ pizzatypes(bbq,pepperoni,hawaiian)
+ pizzacrust(crispy,thick,vegan)
+ pizzatoppings(bacon,cheese)*/
 
 let pizzaSizes=["small","medium","large"];
 let pizzaTypes=[" "];
@@ -25,9 +28,9 @@ function toppings(name,price){
 }
 
 pizzaList =[
-    new pizzaTypes("BBQ", bbq.jpeg)
-    new pizzaTypes("Pepperoni", "Pepperoni.jpeg")
-    new pizzaTypes("Hawaiian", "hawaiian.jpeg)
+    new pizzaTypes("BBQ", "bbq.jpeg"),
+    new pizzaTypes("Pepperoni", "Pepperoni.jpeg"),
+    new pizzaTypes("Hawaiian", "hawaiian.jpeg")
 ];
 
 let pizzaCrust =[
@@ -41,3 +44,11 @@ let pizzaToppings =[
   new toppings("Bacon", 200),
   
 ];
+
+$(document).ready(funcion(){
+
+  let pizzaItemTemplate = $("#pizzaItem"),
+  let pizzaListDiv = $("#pizzaLists")
+});
+
+for (let i = 0; pizzaList.length; i++)
