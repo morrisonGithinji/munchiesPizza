@@ -24,14 +24,20 @@ function toppings(name,price){
   this.price=price;
 }
 
-pizzaList ={
+pizzaList =[
     new pizzaTypes("BBQ", bbq.jpeg)
     new pizzaTypes("Pepperoni", "Pepperoni.jpeg")
     new pizzaTypes("Hawaiian", "hawaiian.jpeg)
-} 
+];
 
 let pizzaCrust =[
-  new crust("crispy", 120),
+  new crust("Crispy", 120),
   new crust("Thick-crust", 150),
-  new crust("vegan",200)
-]
+  new crust("Vegan",200)
+];
+
+let pizzaToppings =[
+  new toppings("Cheese",100,
+  new toppings("Bacon", 200),
+  
+];
