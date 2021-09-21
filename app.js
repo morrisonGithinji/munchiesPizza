@@ -45,10 +45,10 @@ let cartItemHtml;
 
 const pizzaListing = [
     new pizzaTypes("Haawain",
-        "delish-homemade-pizza-horizontal-1542312378.png",
+        "images/hawaiian.jpeg",
         "This is haawain pizza"),
-    new pizzaTypes("Peperuni", "intro-1571237396.jpg", "This is peperuni"),
-    new pizzaTypes("BBQ Chicken", "pizza-recipe-1-500x375.jpg", "This BBQ Chicken")
+    new pizzaTypes("Pepperoni", "images/pepperoni.jpeg", "This is pepperoni"),
+    new pizzaTypes("BBQ Chicken", "images/bbq.jpeg", "This BBQ Chicken")
 ];
 
 const crustList = [
@@ -149,7 +149,7 @@ $(document).ready(function () {
         pizzaItems += `<div class="col-md-4 p-3">
         <div class="card" style="width: 18rem;">
         <div class="pizzaImage">
-        <img src="./assets/images/${pizzaItem.image}" class="card-img-top" alt="...">
+        <img src="pizza/images${pizzaItem.image}" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
           <h5 class="card-title">`+ pizzaItem.name + `</h5>
