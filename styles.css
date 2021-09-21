@@ -1,4 +1,11 @@
-
+.header{
+  text-align: center;
+  height: 500px;
+  background-image: url(images/images2.jpeg);
+  background-position: center;
+  color: aliceblue;
+  padding-top: 10pc;
+}
 .pizzaImg{
   height: 100px;
 }
@@ -16,4 +23,8 @@
   position:absolute;
   z-index: 1;
   display: none;
+}
+.mapouter{
+  margin-left: 40pc;
+  
 }

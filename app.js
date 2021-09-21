@@ -44,11 +44,11 @@ let selectedPizza;
 let cartItemHtml;
 
 const pizzaListing = [
-    new pizzaTypes("Haawain",
-        "images/hawaiian.jpeg",
-        "This is haawain pizza"),
-    new pizzaTypes("Pepperoni", "images/pepperoni.jpeg", "This is pepperoni"),
-    new pizzaTypes("BBQ Chicken", "images/bbq.jpeg", "This BBQ Chicken")
+    new pizzaTypes("Hawaiian",
+        "hawaiian.jpeg",
+        "This is hawaiian pizza"),
+    new pizzaTypes("Pepperoni", "pepperoni.jpeg", "This is pepperoni"),
+    new pizzaTypes("BBQ Chicken", "bbq.jpeg", "This BBQ Chicken")
 ];
 
 const crustList = [
