@@ -59,7 +59,7 @@ const crustList = [
 
 const topingsList = [
     new toppings("bacon", 120),
-    new toppings("checken", 150),
+    new toppings("chicken", 150),
     new toppings("cheese", 200)
 ];
 
@@ -149,7 +149,7 @@ $(document).ready(function () {
         pizzaItems += `<div class="col-md-4 p-3">
         <div class="card" style="width: 18rem;">
         <div class="pizzaImage">
-        <img src="pizza/images${pizzaItem.image}" class="card-img-top" alt="...">
+        <img src="images/${pizzaItem.image}" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
           <h5 class="card-title">`+ pizzaItem.name + `</h5>
