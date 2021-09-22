@@ -34,10 +34,6 @@ function Cart(){
     }
 }
 
-function zone(zoneName, price){
-    this.zoneName = zoneName;
-    this.price = price;
-}
 
 let cart = new Cart();
 let selectedPizza;
@@ -63,11 +59,6 @@ const topingsList = [
     new toppings("cheese", 200)
 ];
 
-const zones = [
-    new zone("Zone A", 100),
-    new zone("Zone B", 200),
-    new zone("Zone C", 300)
-]
 
 function populateDropdowns(sizeElement, items, valueFiled, textField, extraField){
     for (let i = 0; i < items.length; i++) {
@@ -231,12 +222,7 @@ $(document).ready(function () {
         updateUI();
     });
    
-    populateDropdowns($('select#deliveryZones'), zones, 'zoneName', 'zoneName', 'price');
-    $('select#deliveryZones').on("change", function(){
-        cart.delivery = zones.find(z=>z.zoneName == $(this).val());
-        
-        updateUI();
-    });
+    
     
     const addToCartBtn = $('#addToCartBtn');
     addToCartBtn.click(function(){        
