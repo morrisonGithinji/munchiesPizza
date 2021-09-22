@@ -107,7 +107,7 @@ function updateUI(){
         if(item.topping.length > 0){
             toppingPrice = item.topping.reduce((a, b)=>a+b.price, 0);
         }
-        // const toppingPrice = item.topping ? item.topping.price : 0;
+      
         subTotalPrice += item.price + crustPrice + toppingPrice;
 
         $('#shoppingCart ul.list-group').append(cartItemHtml);        
@@ -139,7 +139,7 @@ $(document).ready(function () {
     cartItemHtml = $('#shoppingCart .cartItem').prop('outerHTML');
     $('#shoppingCart .cartItem').remove();
 
-    /* Populating pizza list */
+   
     const pizzaListDiv = $('#pizzalisting');
     let pizzaItems = '';
 
@@ -180,9 +180,7 @@ $(document).ready(function () {
             $('#pizzaPrice').html('');
         });
     });
-    /* end of Populating pizza list */
-
-    /* Populate sizes */
+    
     populateDropdowns($('select#size'), pizzaSizes);
     $('select#size').on('change', function(){
         const size =$(this).val();
@@ -191,10 +189,7 @@ $(document).ready(function () {
         }
         updateUI()
     });
-    /* end of Populate sizes */
-
-    /* Populate Toppings */
-    // populateDropdowns($('select#toppings'), topingsList, 'name', 'name', 'price');
+  
     for(let i=0; i<topingsList.length; i++){
         let topping = topingsList[i];
         $('#toppings').append(`<div class="form-check">
@@ -224,9 +219,7 @@ $(document).ready(function () {
         }
         updateUI()
     });
-    /* end of Populate sizes */
-
-    /* Populate crust */
+   
     populateDropdowns($('select#crust'), crustList, 'name', 'name', 'price');
     $('select#crust').on('change', function(){
         const selectedCrustValue = $(this).val();
@@ -237,18 +230,14 @@ $(document).ready(function () {
         selectedPizza.crust = crust;
         updateUI();
     });
-    /* end of Populate sizes */
-
-    /* Populate delivery zones */
+   
     populateDropdowns($('select#deliveryZones'), zones, 'zoneName', 'zoneName', 'price');
     $('select#deliveryZones').on("change", function(){
         cart.delivery = zones.find(z=>z.zoneName == $(this).val());
-        // console.log(cart.delivery);
+        
         updateUI();
     });
-    /* End of populate delivery zones */
-
-    /* add to cart action */
+    
     const addToCartBtn = $('#addToCartBtn');
     addToCartBtn.click(function(){        
         cart.addToCart(selectedPizza);
